@@ -2,23 +2,17 @@
 import React from 'react'
 
 export const JobList = ({
-    id,
     company,
     logo,
     isNew,
     featured,
     position,
-    role,
-    level,
     postedAt,
     contract,
     location,
-    languages,
-    tools,
     filterTag,
+    jobTags
 }) => {
-
-    const tags = [role, level, ...languages, ...tools]
 
     return (
         <>
@@ -79,7 +73,7 @@ export const JobList = ({
             <div className='mb-[10px] '>
 
                 {
-                    tags.map((tag, index) => (
+                    jobTags.map((tag, index) => (
                         <button value={tag} key={index} onClick={()=> filterTag(tag)} className='bg-[#effafa] text-[#5ba4a4] rounded-[5px] text-[11px]  font-bold hover:bg-[#5ba4a4] hover:text-white cursor-pointer mx-[5px] py-[8px] px-[5px]' >
                             {tag}
                         </button>
