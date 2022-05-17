@@ -29,7 +29,7 @@ const filterTag = (tag) => {
 
 
     return (
-        <div className={`${filter.length === 0 ? 'mt-52' : ''}`}>
+        <div className={`w-4/5 max-w-md md:max-w-[720px] md:w-full lg:max-w-[960px] xl:max-w-full xl:w-[1200px] 2xl:max-w-full mx-auto animate__animated animate__fadeIn  ${filter.length === 0 ? 'mt-52' : ''}`}>
 
         {
             (filter.length > 0 ) && 
@@ -48,7 +48,7 @@ const filterTag = (tag) => {
                 const jobTags = [jobs.role, jobs.level, ...(jobs.languages) || [], ...(jobs.tools) || []]
 
                 const job = filterJobs(jobTags, filter)
-                console.log(jobTags);
+                // console.log(jobTags);
 
                 return filter.length === 0 ? 
                 (
