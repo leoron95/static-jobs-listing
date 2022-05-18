@@ -3,7 +3,7 @@ import React from 'react'
 export const JobsBar = ({filter , clearAll, clearFilter}) => {
 
     return (
-        <div className=' container mx-auto relative py-[20px] bg-white flex items-center justify-between mt-28  shadow-lg  rounded-[5px] animate__animated animate__fadeIn  '>
+        <div className=' container mx-auto  py-[20px] bg-white flex items-center justify-between   shadow-lg  rounded-[5px] animate__animated animate__fadeIn  '>
 
             <div className='flex flex-wrap flex-row md:flex-row ml-4 md:ml-[35px] '>
             

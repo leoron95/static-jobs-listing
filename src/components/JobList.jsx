@@ -1,4 +1,3 @@
-
 import React from 'react'
 
 export const JobList = ({
@@ -16,36 +15,30 @@ export const JobList = ({
 
     return (
         <>
-        {/* <div className='flex'> */}
 
-        
         <div
             className={`flex flex-col md:flex-row   justify-between  container 
-            mx-auto py-[20px] animate__animated animate__fadeIn  my-10 shadow-lg   relative bg-white rounded-[5px]  ${featured ? 'border-l-[5px] border-l-[#5ba4a4]' : '' }`}
+            mx-auto py-[20px] animate__animated animate__fadeIn  mb-10 md:mb-5 shadow-lg   relative bg-white rounded-[5px]  ${featured ? 'border-l-[5px] border-l-[#5ba4a4]' : '' }`}
             >
-
-                {/* <div className='flex flex-col justify-between flex-shrink-1 md:flex-row'> */}
-
-                
-
+            
             <div className={`flex mt-3 flex-shrink-0  ${featured ? 'md:px-[31px]' : 'md:px-9'}`}>
                 
-                <div className=' flex flex-col md:w-[90px]  w-[50px] mr-4 absolute translate-x-3 -translate-y-14  md:relative md:-translate-x-0 md:-translate-y-0 '>
+                <div className=' flex flex-col md:w-[90px]  w-[50px] mr-4 absolute translate-x-4 -translate-y-14  md:relative md:-translate-x-0 md:-translate-y-0 '>
 
                 <img src={logo} alt={`${company} logo`}/>
                 </div>
 
-                <div className='justify-between ml-4 job-details'>
-                    <div className='flex company'>
+                <div className='justify-between ml-4'>
+                    <div className='flex'>
 
-                        <h1 className='text-[#5ba4a4] font-bold text-[11px]'>{company}</h1>
+                        <h1 className='text-[#5ba4a4] font-bold text-[12px]'>{company}</h1>
 
                         {
                             (isNew)
                             
                             &&
                             
-                            <div className='job-news flex ml-[15px] bg-[#5ba4a4] text-white rounded-[30px] text-[10px] w-11 font-bold'>
+                            <div className='flex ml-[15px] bg-[#5ba4a4] text-white rounded-[30px] text-[10px] w-11 font-bold h-5'>
                                 <h5 className='self-center mx-auto '>NEW!</h5>
                             </div>
                         }
@@ -55,8 +48,8 @@ export const JobList = ({
 
                             &&
 
-                            <div className='job-news flex ml-[7px] bg-black text-white rounded-[30px] text-[10px] w-[70px] font-bold'>
-                                <h5 className='self-center mx-auto '>FEATURED</h5>
+                            <div className='flex ml-[7px] bg-black text-white rounded-[30px] text-[10px] w-[70px] font-bold h-5'>
+                                <h5 className='self-center mx-auto'>FEATURED</h5>
                             </div>
                         }
 
@@ -79,14 +72,9 @@ export const JobList = ({
                 
             </div>
             
-            
-
-
         <div>
             <div className='flex mb-3 ml-3 mr-3 '>
                 <div className='flex flex-wrap flex-grow-0  md:justify-end  border-t-[1px] border-t-[#7b8e8e] md:border-0 lg:mt-[25px] '>
-
-                
 
                 {
                     jobTags.map((tag, index) => (
@@ -99,9 +87,6 @@ export const JobList = ({
             </div> 
                 </div>
                     </div>
-                    {/* </div> */}
-                    {/* </div> */}
-        
             </>
     )
 }
